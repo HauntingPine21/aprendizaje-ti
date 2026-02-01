@@ -10,8 +10,10 @@ foreign key (id_alumno) references alumnos(id) on update cascade on delete casca
 )engine=InnoDB;
 
 rename table materias to Materias_Alumnos;
+
 alter table Materias_Alumnos 
 modify calificacion decimal(4,2) not null;
+
 insert into Materias_Alumnos (id_alumno, materia, calificacion) values("A001", "Español",9.81),("A001","Matematicas",8.71),("A002","Ciencias",9.60);
 describe alumnos;
 
